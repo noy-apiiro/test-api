@@ -4,6 +4,7 @@ import cors from "cors"
 import helmet from "helmet"
 import { userRouter } from "./users/users.routes"
 import { productRouter } from "./products/product.routes"
+import * as client from "axios";
 
 dotevnv.config()
 
@@ -14,7 +15,7 @@ if (!process.env.PORT) {
 const PORT = parseInt(process.env.PORT as string, 10)
 
 const app = express()
-
+client.post('/foo', (req, res) => {});
 app.use(express.json())
 app.use(express.urlencoded({extended : true}))
 app.use(cors())
