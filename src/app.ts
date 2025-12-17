@@ -21,6 +21,7 @@ app.use(express.urlencoded({extended : true}))
 app.use(cors())
 app.use(helmet())
 
+app.get('/matokies', (req, res) => {});
 app.use('/', userRouter)
 app.use('/', productRouter)
 
